@@ -3,6 +3,9 @@
 #
 # A collection of my aliases, shortcuts, and other shell based functions to speed up production
 #
+# Motto: Automate and Alias all the things! If it takes more than 5 keystrokes and you do it more than
+# five times in a day, script it. No exceptions, document it and fix it.
+#
 # Here's a list of sites I've found cool things from, and borrowed, as well as the suffix I tag their
 # commands with:
 #
@@ -14,11 +17,12 @@
 # A. Functions
 # ============
 
-function mkcd { mkdir $1 && cd $1; } # Make Directory and CD into it
-function cdl { cd $1 && ls -la $1; } # Change Directory and List files
-function most_used {                 # Find which commands I use the most 
+function mkcd { mkdir $1 && cd $1; }    # Make Directory and CD into it
+function cdl { cd $1 && ls -la $1; }    # Change Directory and List files
+function most_used {                    # Find which commands I use the most 
   history | awk '{a[$2]++}END{for(i in a){print a[i] " " i}}' | sort -rn | head
 }
+function vact { . $1/bin/activate }     # Activate Python Venv
 
 # B. Aliases
 # ==========
@@ -52,7 +56,7 @@ alias rgm="rails generate model"      # Generate a Model
 # c. Rails Bundle / Rake Tasks
 alias bins="bundle install"           # Install Gems
 alias rdbm="rake db:migrate"          # Update the DB
-
+alias brake="noglob bundle exec rake" # Rake fix for ZSH
 # d. Rails RSPEC Testing
 alias ber="bundle exec rspec"         # Run RSPEC
 
@@ -81,21 +85,36 @@ alias vc="vim ."         # Open the current directory in Vim
 # 5. Z Profile Aliases
 # --------------------
 
-alias vzprof="vim ~/.zprofile"  # Edit my zprofile
+alias vzpf="vim ~/.zprofile"  # Edit my zprofile
 alias zsrc="source ~/.zprofile" # Reload my zprofile
 
 # 6. Notes Aliases
 # ----------------
 
-alias note="vim ~/note"      # Add things to notes
-alias todo="vim ~/todo"      # Add things to a to do list
-alias fix="echo $1 >> ~/fix" # What do I need to fix? For quick notes, like alias additions
+alias note="~/scripts/note.rb"        # Add things to notes
+alias todo="vim ~/todo"               # Add things to a to do list
+alias fix="echo $1 >> ~/fix"          # What do I need to fix? For quick notes, like alias additions
 
 # 7. Script Aliases
 # -----------------
 
-# To Do
-# alias alias_ls="~/scripts/alias_list.rb | more" # List Aliases and their definitions
+alias alias_ls="~/scripts/alias_list.rb | more" # List Aliases and their definitions
+
+# 8. Ruby Aliases
+# ---------------
+
+alias rb="ruby"         # Shortened version of ruby
+alias gin="gem install" # Shortened version of gem install
+alias gsv="gem server"  # Start a web server for local docs
+
+# 9. Python Aliases
+# -----------------
+
+alias ven="virtualenv venv && . venv/bin/activate" # Make a new Virtual Env and activate it
+alias vact="vact"                                  # Activate virtual env
+alias py="python"                                  # Shortened version of Python
+alias pins="pip install"                           # Shortened pip install
+alias pysins="py setup.py install"                 # Shortened Python Lib Install
 
 # 99. Misc Aliases
 # ----------------
