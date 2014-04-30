@@ -42,7 +42,6 @@ alias -g M="| more"            # Suffix: More [Ben]
 alias -g S="| sed"             # Suffix: Sed
 
 alias c="clear"                             # Clear
-alias verify_msg="cat ~/snips/verify_msg C" # Verification Message to clipboard
 
 # Ruby Aliases
 # ------------
