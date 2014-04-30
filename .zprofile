@@ -103,6 +103,8 @@ gcm () {
   git commit -m "`cbp` $*"
 }
 
+open_repo () { launchy "`git config --get remote.origin.url | sed 's/\.git//'`" }
+
 # Commits
 get_commits () {
   i=1
