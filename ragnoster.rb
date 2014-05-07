@@ -1,5 +1,3 @@
-# Custom Pry theme generator made after the agnoster zsh theme
-
 require 'rainbow'
 require 'rainbow/ext/string'
 
@@ -34,9 +32,9 @@ class Ragnoster
   def waiting_prompt
     [
       prompt_head,
-      prompt_title(:black, :blue),
-      prompt_nesting(:black, :blue),
-      prompt_waiting
+      prompt_waiting,
+      prompt_title,
+      prompt_nesting
     ]
   end
 
@@ -56,7 +54,7 @@ class Ragnoster
     prompt content: @title, bg: bg, fg: fg
   end
 
-  def prompt_nesting(bg = :green, fg = :black)
+  def prompt_nesting(bg = :black, fg = :blue)
     prompt content: @nesting, bg: bg, fg: fg
   end
 
