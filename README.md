@@ -9,4 +9,4 @@ Currently I'm adding in my ZSH Settings and Vim Settings.
 
 Pry theme based on the ZSH agnoster theme.
 
-!(http://i57.tinypic.com/t5183t.png)
+![ragnoster](http://i57.tinypic.com/t5183t.png)
