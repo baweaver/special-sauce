@@ -168,7 +168,6 @@ vact () { . $1/bin/activate }                      # Activate Python Venv
 # -------------
 
 alias asset_clear="rake assets:clobber && rake tmp:clear"
-alias blue_steel_update="bundle update && asset_clear"
 
 # Script Aliases
 # --------------
