@@ -50,7 +50,7 @@ alias gin="gem install" # Shortened version of gem install
 alias gsv="gem server"  # Start a web server for local docs
 alias rb="ruby"         # Shortened version of ruby
 alias pgm="pry --gem"   # Pry for gems
-alias ln="launchy"      # Launchy
+alias www="launchy"      # Launchy
 
 # Rails Aliases
 # -------------
